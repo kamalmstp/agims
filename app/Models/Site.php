@@ -24,4 +24,9 @@ class Site extends Model
     {
         return $this->hasMany(EmployeeAssignment::class);
     }
+
+    public function units()
+    {
+        return $this->hasMany(Unit::class);
+    }
 }
