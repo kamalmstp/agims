@@ -19,4 +19,9 @@ class Site extends Model
     {
         return $this->belongsTo(Company::class);
     }
+
+    public function assignments()
+    {
+        return $this->hasMany(EmployeeAssignment::class);
+    }
 }
