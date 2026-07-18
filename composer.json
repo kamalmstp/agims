@@ -12,7 +12,7 @@
     ],
     "license": "MIT",
     "require": {
-        "php": "^8.2",
+        "php": "^8.4",
         "bezhansalleh/filament-shield": "^3.3",
         "dedoc/scramble": "^0.12.10",
         "dutchcodingcompany/filament-socialite": "^2.3",
@@ -90,7 +90,7 @@
     },
     "config": {
         "platform": {
-            "php": "8.4.0"
+            "php": "8.4.19"
         },
         "optimize-autoloader": true,
         "preferred-install": "dist",

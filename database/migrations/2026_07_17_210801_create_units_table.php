@@ -28,7 +28,7 @@ return new class extends Migration
             $table->integer('made_year')->nullable();
             $table->decimal('hm_current', 10, 2)->nullable();
             $table->decimal('km_current', 10, 2)->nullable();
-            $table->timestamps();   
+            $table->timestamps();
         });
     }
 
