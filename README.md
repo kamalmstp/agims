@@ -23,3 +23,25 @@
 ## Yang perlu di tentukan
 [x] Nama resmi system apps
 [x] Nomor Induk Karyawan Unique di setiap perusahaan harus seragam
+
+
+
+AGIMS V1 (TAP) Scope
+
+Target V1:
+
+✅ Monitoring Produksi Hauling
+✅ Monitoring Unit
+✅ Monitoring Maintenance
+✅ Monitoring Sparepart
+✅ KPI PA/MA/UA
+✅ Dashboard Management
+
+Belum masuk:
+
+❌ Tyre Management
+❌ Fuel Management
+❌ HR & Payroll
+❌ Procurement
+❌ Finance
+❌ Port Management
