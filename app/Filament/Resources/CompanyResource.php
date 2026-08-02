@@ -17,17 +17,17 @@ class CompanyResource extends Resource
 {
     protected static ?string $model = Company::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationIcon = 'heroicon-o-building-office-2';
 
     public static function getNavigationLabel(): string
     {
         return 'Organization';
     }
 
-    public static function getNavigationGroup(): ?string
-    {
-        return 'Master Data';
-    }
+    // public static function getNavigationGroup(): ?string
+    // {
+    //     return 'Master Data';
+    // }
 
     public static function getNavigationSort(): ?int
     {
@@ -81,6 +81,13 @@ class CompanyResource extends Resource
                     Tables\Actions\DeleteBulkAction::make(),
                 ]),
             ]);
+    }
+
+    public static function getRelations(): array
+    {
+        return [
+            RelationManagers\SitesRelationManager::class,
+        ];
     }
 
     public static function getPages(): array
