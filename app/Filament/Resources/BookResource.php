@@ -68,6 +68,7 @@ class BookResource extends Resource implements HasShieldPermissions
         return $table
             ->columns([
                 Tables\Columns\TextColumn::make('title')
+                    ->label('Book Title')
                     ->searchable(),
                 Tables\Columns\TextColumn::make('author')
                     ->searchable(),
