@@ -94,6 +94,13 @@ class CompanyResource extends Resource
     {
         return [
             'index' => Pages\ManageCompanies::route('/'),
+            'view' => Pages\ViewCompany::route('/{record}'),
         ];
+    }
+
+    protected function getTableRecordUrlUsing(): ?Closure
+    {
+        return fn ($record) =>
+            static::getUrl('view', ['record'=>$record]);
     }
 }
