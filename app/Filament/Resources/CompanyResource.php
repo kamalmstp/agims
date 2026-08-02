@@ -18,21 +18,14 @@ class CompanyResource extends Resource
     protected static ?string $model = Company::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-building-office-2';
-
-    public static function getNavigationLabel(): string
-    {
-        return 'Organization';
-    }
+    protected static ?string $navigationLabel = 'Organization';
+    protected static ?int $navigationSort = 1;
+    protected static ?string $recordTitleAttribute = 'Company';
 
     // public static function getNavigationGroup(): ?string
     // {
     //     return 'Master Data';
     // }
-
-    public static function getNavigationSort(): ?int
-    {
-        return 1;
-    }
 
     public static function form(Form $form): Form
     {
