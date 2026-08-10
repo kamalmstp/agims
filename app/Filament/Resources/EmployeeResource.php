@@ -17,7 +17,10 @@ class EmployeeResource extends Resource
 {
     protected static ?string $model = Employee::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationIcon = 'heroicon-o-user-group';
+    protected static ?string $navigationLabel = 'Karyawan';
+    protected static ?int $navigationSort = 2;
+    protected static ?string $recordTitleAttribute = 'Daftar Karyawan';
 
     public static function form(Form $form): Form
     {
@@ -117,7 +120,7 @@ class EmployeeResource extends Resource
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
-   Tables\Actions\DeleteAction::make(),
+                Tables\Actions\DeleteAction::make(),
 
             ])
             ->bulkActions([

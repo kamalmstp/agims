@@ -17,7 +17,10 @@ class UnitResource extends Resource
 {
     protected static ?string $model = Unit::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationIcon = 'heroicon-o-truck';
+    protected static ?string $navigationLabel = 'Unit';
+    protected static ?int $navigationSort = 3;
+    protected static ?string $recordTitleAttribute = 'Daftar Unit';
 
     public static function form(Form $form): Form
     {
@@ -39,37 +42,26 @@ class UnitResource extends Resource
                     ->required()
                     ->maxLength(50),
                 Forms\Components\TextInput::make('model_number')
-                    ->required()
                     ->maxLength(50),
                 Forms\Components\TextInput::make('chassis_number')
-                    ->required()
                     ->maxLength(50),
                 Forms\Components\TextInput::make('raw')
-                    ->required()
                     ->maxLength(50),
                 Forms\Components\TextInput::make('faw')
-                    ->required()
                     ->maxLength(50),
                 Forms\Components\TextInput::make('gcw')
-                    ->required()
                     ->maxLength(50),
                 Forms\Components\TextInput::make('engine_model')
-                    ->required()
                     ->maxLength(50),
                 Forms\Components\TextInput::make('engine_number')
-                    ->required()
                     ->maxLength(50),
                 Forms\Components\TextInput::make('capacity')
-                    ->required()
                     ->maxLength(50),
                 Forms\Components\TextInput::make('made_year')
-                    ->required()
                     ->maxLength(50),
                 Forms\Components\TextInput::make('hm_current')
-                    ->required()
                     ->maxLength(50),
                 Forms\Components\TextInput::make('km_current')
-                    ->required()
                     ->maxLength(50),
             ]);
     }
