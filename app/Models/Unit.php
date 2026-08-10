@@ -29,4 +29,9 @@ class Unit extends Model
     {
         return $this->belongsTo(UnitModel::class, 'model_id');
     }
+
+    public function productions()
+    {
+        return $this->hasMany(Production::class);
+    }
 }

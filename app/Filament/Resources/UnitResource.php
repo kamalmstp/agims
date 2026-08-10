@@ -17,6 +17,7 @@ class UnitResource extends Resource
 {
     protected static ?string $model = Unit::class;
 
+    protected static ?string $navigationGroup = 'Asset Management';
     protected static ?string $navigationIcon = 'heroicon-o-truck';
     protected static ?string $navigationLabel = 'Unit';
     protected static ?int $navigationSort = 3;
@@ -70,10 +71,10 @@ class UnitResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('company.name')->label('Company'),
-                Tables\Columns\TextColumn::make('site.name')->label('Site'),
-                Tables\Columns\TextColumn::make('model.name')->label('Model'),
+                Tables\Columns\TextColumn::make('company.code')->label('Company'),
+                Tables\Columns\TextColumn::make('site.code')->label('Site'),
                 Tables\Columns\TextColumn::make('unit_code'),
+                Tables\Columns\TextColumn::make('model.name')->label('Model'),
                 Tables\Columns\TextColumn::make('model_number'),
                 Tables\Columns\TextColumn::make('chassis_number'),
                 Tables\Columns\TextColumn::make('engine_model'),
@@ -87,8 +88,6 @@ class UnitResource extends Resource
             ->actions([
                 Tables\Actions\EditAction::make(),
                 Tables\Actions\DeleteAction::make(),
-   Tables\Actions\DeleteAction::make(),
-
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([

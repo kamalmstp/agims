@@ -34,4 +34,9 @@ class Employee extends Model
     {
         return $this->hasMany(EmployeeAssignment::class);
     }
+
+    public function productions()
+    {
+        return $this->hasMany(Production::class);
+    }
 }

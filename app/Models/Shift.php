@@ -14,4 +14,9 @@ class Shift extends Model
     protected $guarded = ['id'];
     // add hidden
     protected $hidden = ['created_at', 'updated_at'];
+
+    public function productions()
+    {
+        return $this->hasMany(Production::class);
+    }
 }

@@ -29,4 +29,9 @@ class Site extends Model
     {
         return $this->hasMany(Unit::class);
     }
+
+    public function productions()
+    {
+        return $this->hasMany(Production::class);
+    }
 }
