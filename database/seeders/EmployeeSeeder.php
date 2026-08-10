@@ -27,26 +27,27 @@ class EmployeeSeeder extends Seeder
         foreach ($rows as $row) {
             $data = array_combine($header, $row);
 
-            Employee::create([
-                'company_id' => $data['company_id'],
-                'department_id' => $data['department_id'],
-                'position_id' => $data['position_id'],
-                'code' => $data['code'],
-                'nik' => $data['nik'],
-                'name' => $data['name'],
-                'nick_name' => $data['nick_name'],
-                'birth_date' => $data['birth_date'],
-                'join_date' => $data['join_date'],
-                'email' => $data['email'],
-                'phone' => $data['phone'],
-                'address' => $data['address'],
-                'city' => $data['city'],
-                'state' => $data['state'],
-                'zip' => $data['zip'],
-                'country' => $data['country'],
-                'photo' => $data['photo'],
-                'is_active' => $data['is_active'],
-            ]);
+            Employee::updateOrCreate(
+                [
+                    'company_id' => $data['company_id'],
+                    'department_id' => $data['department_id'],
+                    'position_id' => $data['position_id'],
+                    'code' => $data['code'],
+                    'nik' => $data['nik'],
+                    'name' => $data['name'],
+                    'nick_name' => $data['nick_name'],
+                    'birth_date' => $data['birth_date'],
+                    'join_date' => $data['join_date'],
+                    'email' => $data['email'],
+                    'phone' => $data['phone'],
+                    'address' => $data['address'],
+                    'city' => $data['city'],
+                    'state' => $data['state'],
+                    'zip' => $data['zip'],
+                    'country' => $data['country'],
+                    'photo' => $data['photo'],
+                    'is_active' => $data['is_active'],
+                ]);
         }
     }
 }
