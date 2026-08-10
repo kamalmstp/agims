@@ -76,15 +76,15 @@ class EmployeeResource extends Resource
                     ->searchable(),
                 Tables\Columns\TextColumn::make('name')
                     ->searchable(),
-                Tables\Columns\TextColumn::make('company.name')
-                    ->searchable(),
-                Tables\Columns\TextColumn::make('department.name')
-                    ->searchable(),
-                Tables\Columns\TextColumn::make('position.code')
-                    ->searchable(),
-                Tables\Columns\TextColumn::make('birth_date')
-                    ->date()
-                    ->sortable(),
+                // Tables\Columns\TextColumn::make('company.name')
+                //     ->searchable(),
+                // Tables\Columns\TextColumn::make('department.name')
+                //     ->searchable(),
+                // Tables\Columns\TextColumn::make('position.code')
+                //     ->searchable(),
+                // Tables\Columns\TextColumn::make('birth_date')
+                //     ->date()
+                //     ->sortable(),
                 Tables\Columns\TextColumn::make('join_date')
                     ->date()
                     ->sortable(),

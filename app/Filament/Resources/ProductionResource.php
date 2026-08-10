@@ -23,7 +23,7 @@ class ProductionResource extends Resource
     {
         return $form
             ->schema([
-                Forms\Components\Section::make('Production Information')
+                Forms\Components\Section::make('Information')
                     ->schema([
                         Forms\Components\DatePicker::make('production_date')
                             ->required(),
@@ -45,7 +45,7 @@ class ProductionResource extends Resource
                         Forms\Components\Textarea::make('note'),
                     ])
                     ->columns(2),
-                Forms\Components\Section::make('Unit Information')
+                Forms\Components\Section::make('Detail Information')
                     ->schema([
                         Forms\Components\Select::make('unit_id')
                             ->label('Unit')
@@ -55,11 +55,7 @@ class ProductionResource extends Resource
                             ->label('Employee')
                             ->relationship('employee', 'name')
                             ->required(),
-                    ])
-                    ->columns(2),
 
-                Forms\Components\Section::make('Muatan Information')
-                    ->schema([
                         Forms\Components\TextInput::make('bruto')
                             ->numeric(),
                         Forms\Components\TextInput::make('tara')
@@ -68,7 +64,7 @@ class ProductionResource extends Resource
                             ->numeric()
                             ->required(),
                     ])
-                    ->columns(1),
+                    ->columns(2),
             ]);
     }
 
