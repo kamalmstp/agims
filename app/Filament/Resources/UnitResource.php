@@ -20,7 +20,7 @@ class UnitResource extends Resource
     protected static ?string $navigationGroup = 'Asset Management';
     protected static ?string $navigationIcon = 'heroicon-o-truck';
     protected static ?string $navigationLabel = 'Unit';
-    protected static ?int $navigationSort = 3;
+    protected static ?int $navigationSort = 1;
     protected static ?string $recordTitleAttribute = 'Daftar Unit';
 
     public static function form(Form $form): Form
