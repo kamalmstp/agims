@@ -20,7 +20,10 @@ class EmployeeSeeder extends Seeder
             return;
         }
 
-        $rows = array_map('str_getcsv', file($file));
+        $rows = array_map(
+            fn ($line) => str_getcsv($line, ';'),
+            file($file)
+        );
 
         $header = array_shift($rows);
 
@@ -36,16 +39,7 @@ class EmployeeSeeder extends Seeder
                     'nik' => $data['nik'],
                     'name' => $data['name'],
                     'nick_name' => $data['nick_name'],
-                    'birth_date' => $data['birth_date'],
                     'join_date' => $data['join_date'],
-                    'email' => $data['email'],
-                    'phone' => $data['phone'],
-                    'address' => $data['address'],
-                    'city' => $data['city'],
-                    'state' => $data['state'],
-                    'zip' => $data['zip'],
-                    'country' => $data['country'],
-                    'photo' => $data['photo'],
                     'is_active' => $data['is_active'],
                 ]);
         }
