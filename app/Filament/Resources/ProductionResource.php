@@ -30,10 +30,12 @@ class ProductionResource extends Resource
                         Forms\Components\Select::make('site_id')
                             ->label('Site')
                             ->relationship('site', 'name')
+                            ->searchable()
                             ->required(),
                         Forms\Components\Select::make('shift_id')
                             ->label('Shift')
                             ->relationship('shift', 'name')
+                            ->searchable()
                             ->required(),
                         Forms\Components\TextInput::make('no_tiket')
                             ->required()
@@ -50,10 +52,12 @@ class ProductionResource extends Resource
                         Forms\Components\Select::make('unit_id')
                             ->label('Unit')
                             ->relationship('unit', 'unit_code')
+                            ->searchable()
                             ->required(),
                         Forms\Components\Select::make('employee_id')
                             ->label('Employee')
                             ->relationship('employee', 'name')
+                            ->searchable()
                             ->required(),
 
                         Forms\Components\TextInput::make('bruto')

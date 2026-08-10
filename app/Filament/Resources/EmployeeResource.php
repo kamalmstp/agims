@@ -31,9 +31,11 @@ class EmployeeResource extends Resource
                     ->required(),
                 Forms\Components\Select::make('department_id')
                     ->relationship('department', 'name')
+                    ->searchable()
                     ->required(),
                 Forms\Components\Select::make('position_id')
                     ->relationship('position', 'code')
+                    ->searchable()
                     ->required(),
                 Forms\Components\TextInput::make('code')
                     ->maxLength(255),
