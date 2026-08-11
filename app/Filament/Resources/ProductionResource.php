@@ -79,9 +79,9 @@ class ProductionResource extends Resource
                 Tables\Columns\TextColumn::make('production_date')->date(),
                 Tables\Columns\TextColumn::make('site.name')->label('Site'),
                 Tables\Columns\TextColumn::make('shift.name')->label('Shift'),
-                Tables\Columns\TextColumn::make('no_tiket'),
+                Tables\Columns\TextColumn::make('no_tiket')->searchable(),
                 Tables\Columns\TextColumn::make('unit.unit_code')->label('Unit'),
-                Tables\Columns\TextColumn::make('employee.name')->label('Employee'),
+                Tables\Columns\TextColumn::make('employee.name')->label('Employee')->searchable(),
                 Tables\Columns\TextColumn::make('tonase'),
             ])
             ->filters([
