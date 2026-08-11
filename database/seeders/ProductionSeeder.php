@@ -13,10 +13,10 @@ class ProductionSeeder extends Seeder
      */
     public function run(): void
     {
-        $file = database_path('seeders/data/productions.csv');
+        $file = database_path('seeders/data/production.csv');
 
         if(! file_exists($file)) {
-            $this->command->error("File productions.csv not found in seeders directory.");
+            $this->command->error("File production.csv not found in seeders directory.");
             return;
         }
 
